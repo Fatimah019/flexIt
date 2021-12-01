@@ -1,0 +1,80 @@
+.app-bar {
+  flex: 1;
+  background-color: purple;
+
+  /* display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0; */
+  /* width: 240px; */
+  position: relative;
+}
+.side-bar {
+  /* background-color: blue; */
+  position: fixed;
+  top: 0;
+
+  border-right: 1px solid rgb(175, 175, 175);
+  padding: 2rem 1rem;
+  height: 100%;
+}
+.drawer-btns {
+  position: absolute;
+  top: 12%;
+  /* left: 160px; */
+  right: -15px;
+}
+.side-bar .icon {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.side-bar h3 span {
+  color: gray;
+  font-size: small;
+}
+
+.side-bar ul li {
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  background-color: yellow;
+  margin: 1rem 0rem;
+  border-radius: 4px;
+}
+
+.side-bar ul li a:hover {
+  color: #000;
+}
+.side-bar .fa {
+  background-color: rgba(163, 163, 163, 0.2);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+.socials {
+  display: flex;
+  align-items: center;
+}
+.socials a {
+  margin-right: 10px;
+  color: #000;
+  text-decoration: none;
+}
+.socials a i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  /* .app-bar {
+    display: none;
+    flex: 0.5;
+  } */
+  .side-bar,
+  .app-bar {
+    display: none;
+    /* width: 50px; */
+  }
+}
