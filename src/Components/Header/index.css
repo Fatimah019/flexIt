@@ -61,6 +61,7 @@ header {
 
 .fa-bell {
   position: relative;
+  margin-right: 1.5rem;
 }
 .fa-bell span {
   background-color: red;
@@ -77,12 +78,17 @@ header {
   border-radius: 50%;
   border: 0.2px solid #fff;
 }
-.header-right .user {
+.header-right .user{
+  display:flex;
+  align-items: center;
+}
+.header-right .user .user-img {
   position: relative;
   width: 30px;
   height: 30px;
+  margin-right:1rem;
 }
-.header-right img {
+.header-right .user .user-img img {
   position: absolute;
   top: 0;
   left: 0;
@@ -90,7 +96,7 @@ header {
   height: 100%;
   border-radius: 50%;
 }
-.header-right .user span::before {
+.header-right .user .user-img span::before {
   content: "";
   background-color: rgb(94, 226, 94);
   width: 8px;
