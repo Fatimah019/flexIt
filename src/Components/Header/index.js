@@ -21,7 +21,7 @@ const Header = () => {
       alert("You Must Enter A Search Word");
     } else {
       history.push(`/?search=${inputVal}`);
-      dispatch(fetchSearchedImages(inputVal));
+      dispatch(fetchSearchedImages(inputVal, 1, 20));
       setInputVal("");
     }
   };

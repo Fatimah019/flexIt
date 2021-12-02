@@ -34,15 +34,18 @@ body {
   left: 0;
   height: 100%;
   z-index: 9999999999999999999999;
-  width: 200px;
+  width: 220px;
 }
 .main {
   flex: 8;
-  margin-left: 200px;
+  margin-left: 220px;
+  padding: 0 1rem;
 }
 
 @media screen and (max-width: 768px) {
   .app-bar-side {
+    width: 70px;
+    padding: 0;
     display: none;
   }
   .main {

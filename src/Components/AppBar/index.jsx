@@ -9,6 +9,7 @@ const NavLinks = ({ name, icon, url, index }) => {
     if (activeUrl === location.pathname) {
       return {
         boxShadow: "1px 1px 8px #cacaca",
+        fontWeight: "bold",
       };
     }
   };

@@ -50,7 +50,7 @@ const Home = () => {
   const images = useSelector(getImages);
 
   useEffect(() => {
-    const fetchAllImages = () => dispatch(fetchImages());
+    const fetchAllImages = () => dispatch(fetchImages(1, 20));
     fetchAllImages();
   }, [dispatch]);
 
@@ -70,13 +70,14 @@ const Home = () => {
         <Loader visible={images.loading} />
         {images?.images?.map((item) => {
           return (
-            <div key={item.id}>
+            <a href={item.urls.full} key={item.id}>
               <ImageCard
-                image_url={item?.user?.profile_image.large}
-                name={item.user.name}
-                location={item.total_photos}
+                image_url={item?.user?.profile_image?.large}
+                name={item?.user?.name}
+                location={item?.user?.location}
+                number_likes={item?.likes}
               />
-            </div>
+            </a>
           );
         })}
       </div>

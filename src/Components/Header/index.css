@@ -139,26 +139,26 @@ header {
   border-radius: 50%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   header {
     flex-direction: column;
   }
-  .fa-bars {
-    display: block;
-  }
+
   .search-container {
     margin-bottom: 1rem;
     width: 100%;
   }
+
   .search-container form .search-send-btn {
     padding: 0.5rem 0.5rem;
   }
   .header-right {
     width: 100%;
+    justify-content: flex-start;
   }
-}
-@media screen and (max-width: 600px) {
-  .search-container form .search-send-btn {
-    padding: 0.5rem 0.5rem;
+  .notification-container {
+    top: 7rem;
+    left: 0;
+    width: 14rem;
   }
 }

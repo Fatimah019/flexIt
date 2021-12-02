@@ -1,6 +1,5 @@
 import React from "react";
 import Notification from "../Notification";
-import "./index.css";
 
 const notificationMessages = [
   {
