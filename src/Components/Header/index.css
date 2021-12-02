@@ -1,8 +1,4 @@
 .header {
-  /* position:relative */
-}
-
-.header {
   position: sticky;
   top: 0;
   right: 0;
@@ -55,9 +51,7 @@ header {
 }
 .header-right {
   flex: 2;
-  /* background-color:yellow; */
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 .header-right i {
@@ -110,4 +104,13 @@ header {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+}
+
+@media screen and (max-width:768px){
+  header{
+    flex-direction: column;
+  }
+  .search-container{
+    margin-bottom: 1rem;
+  }
 }
