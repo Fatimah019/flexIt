@@ -122,9 +122,9 @@ header {
   }
   .search-container{
     margin-bottom: 1rem;
+    flex:1;
   }
   .header-right{
-    justify-content: flex-start;
-    align-items: flex-start;
+    flex:1;
   }
 }
