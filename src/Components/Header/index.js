@@ -46,16 +46,19 @@ const Header = () => {
             <span>3</span>
           </i>
           <div className="user">
-            <img
-              src="https://res.cloudinary.com/dycyotaya/image/upload/v1616914740/fatimaheditedbckg_mefdki.jpg"
-              alt="profile-pic"
-            />
-            <span></span>
+            <div className="user-img"> 
+              <img
+                src="https://res.cloudinary.com/dycyotaya/image/upload/v1616914740/fatimaheditedbckg_mefdki.jpg"
+                alt="profile-pic"
+              />
+              <span></span>
+            </div>
+            <label>
+              Abigail <i className="fa fa-angle-down"></i>
+            </label>
           </div>
 
-          <label>
-            Abigail <i className="fa fa-angle-down"></i>
-          </label>
+          
         </div>
       </header>
     </div>
