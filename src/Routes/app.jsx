@@ -5,8 +5,9 @@ import Routes from "../Routes";
 
 function AppRoute() {
   return (
-    <div style={{ display: "flex" }}>
+    <div>
       <AppBar />
+
       <div className="main">
         <Header />
         <Routes />

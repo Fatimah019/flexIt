@@ -31,7 +31,6 @@ body {
 .main {
   flex: 8;
   margin-left: 200px;
-  /* padding: 0 1rem; */
   position: relative;
 }
 
