@@ -5,19 +5,35 @@
   z-index: 999999;
   padding: 1.5rem 2rem;
   background-color: #fff;
+  display: flex;
+  align-items: center;
 }
+/* .fa-bars {
+  display: none;
+} */
 header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
+.notification-container {
+  position: absolute;
+  top: 4rem;
+  right: 0;
+  border-radius: 8px;
+  background-color: #fff;
+  z-index: 9999999;
+  width: 17rem;
+  box-shadow: 2px 2px 6px #cacaca;
+}
+
 .search-container {
   flex: 8;
   background-color: #fff;
   box-shadow: 2px 2px 5px #cacaca;
   padding: 0.5rem 1rem 0.5rem 2.5rem;
-  /* border: 1px solid gray; */
   border-radius: 4px;
   outline: none;
   margin-right: 2rem;
@@ -53,6 +69,7 @@ header {
   flex: 2;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 .header-right i {
   color: var(--secondary-color);
@@ -61,7 +78,8 @@ header {
 
 .fa-bell {
   position: relative;
-  margin-right: 1.5rem;
+  margin-right: 2.5rem;
+  cursor: pointer;
 }
 .fa-bell span {
   background-color: red;
@@ -78,19 +96,24 @@ header {
   border-radius: 50%;
   border: 0.2px solid #fff;
 }
-.header-right .user{
-  display:flex;
+.header-right .user {
+  display: flex;
   align-items: center;
 }
-.header-right .user label{
-  display:flex;
+.header-right .user label {
+  display: flex;
   align-items: center;
+  color: var(--secondary-color);
+}
+.header-right .user label i {
+  font-size: small;
 }
 .header-right .user .user-img {
   position: relative;
   width: 30px;
   height: 30px;
-  margin-right:1rem;
+  margin-right: 1rem;
+  cursor: pointer;
 }
 .header-right .user .user-img img {
   position: absolute;
@@ -116,15 +139,26 @@ header {
   border-radius: 50%;
 }
 
-@media screen and (max-width:768px){
-  header{
+@media screen and (max-width: 768px) {
+  header {
     flex-direction: column;
   }
-  .search-container{
-    margin-bottom: 1rem;
-    flex:1;
+  .fa-bars {
+    display: block;
   }
-  .header-right{
-    flex:1;
+  .search-container {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .search-container form .search-send-btn {
+    padding: 0.5rem 0.5rem;
+  }
+  .header-right {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .search-container form .search-send-btn {
+    padding: 0.5rem 0.5rem;
   }
 }

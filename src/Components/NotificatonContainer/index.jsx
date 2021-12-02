@@ -1,5 +1,6 @@
 import React from "react";
 import Notification from "../Notification";
+import "./index.css";
 
 const notificationMessages = [
   {
@@ -32,7 +33,7 @@ const NotificationContainer = () => {
     <>
       {notificationMessages.map((message, index) => {
         return (
-          <div className="notification-container" key={index}>
+          <div key={index}>
             <Notification
               user_img={message.user_img}
               name={message.name}

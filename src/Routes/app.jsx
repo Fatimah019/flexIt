@@ -6,7 +6,9 @@ import Routes from "../Routes";
 function AppRoute() {
   return (
     <div style={{ display: "flex", justifyContent: "space-between" }}>
-      <AppBar />
+      <div className="app-bar-side">
+        <AppBar />
+      </div>
       <div className="main">
         <Header />
         <Routes />

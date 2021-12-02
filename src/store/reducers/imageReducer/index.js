@@ -48,4 +48,4 @@ export const fetchSearchedImages = (query) =>
   });
 //   selectors
 
-export const getImages = (state) => state.images.images;
+export const getImages = (state) => state.images;

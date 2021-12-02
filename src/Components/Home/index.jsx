@@ -4,7 +4,7 @@ import SelectTabs from "../SelectTabs";
 import ImageCard from "../ImageCard";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchImages, getImages } from "../../store/reducers/imageReducer";
-import NotificationContainer from "../NotificatonContainer";
+import Loader from "../Loader";
 
 const optionTabs = [
   {
@@ -65,8 +65,10 @@ const Home = () => {
           );
         })}
       </div>
+
       <div className="image-container">
-        {images?.map((item) => {
+        <Loader visible={images.loading} />
+        {images?.images?.map((item) => {
           return (
             <div key={item.id}>
               <ImageCard
@@ -77,9 +79,6 @@ const Home = () => {
             </div>
           );
         })}
-      </div>
-      <div className="notifications">
-        <NotificationContainer />
       </div>
     </div>
   );
