@@ -17,6 +17,7 @@
 }
 
 .notifications {
+  display:none;
   position: fixed;
   top: 6rem;
   right: 2rem;
