@@ -6,6 +6,10 @@
   padding: 2rem 2rem;
   height: 100%;
   overflow-y: auto;
+  position: fixed;
+  z-index: 99999999999999999999999999;
+  background-color: #fff;
+  animation: 1s ease-out normal appBarDeskTop forwards;
 }
 .side-bar span {
   display: flex;
@@ -50,14 +54,47 @@
   background-color: transparent;
 }
 
-@media screen and (max-width: 768px) {
-  /* .app-bar {
-    display: none;
-    flex: 0.5;
-  } */
-  .side-bar,
-  .app-bar {
-    /* display: none; */
-    /* width: 50px; */
+@media screen and (max-width: 600px) {
+  .side-bar {
+    width: 70px;
+    padding: 2rem 0rem;
+    animation: 0.8s ease-in normal appBar forwards;
+  }
+  .nav-link i,
+  .side-bar .icon {
+    margin-right: 0;
+    margin-left: 15px;
+  }
+  .link-labels,
+  .icon-text {
+    animation: 0.8s ease-in normal appBarText forwards;
+  }
+}
+
+@keyframes appBarText {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes appBar {
+  from {
+    width: 200px;
+  }
+  to {
+    width: 70px;
+  }
+}
+@keyframes appBarDeskTop {
+  from {
+    width: 70px;
+  }
+  to {
+    width: 200px;
   }
 }

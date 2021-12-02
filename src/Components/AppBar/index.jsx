@@ -17,7 +17,7 @@ const NavLinks = ({ name, icon, url, index }) => {
     <li key={index} style={handleActiveLink(url)} className="nav-links">
       <NavLink to={url} className="nav-link">
         <i className={icon}></i>
-        <p>{name}</p>
+        <p className="link-labels">{name}</p>
       </NavLink>
     </li>
   );
@@ -37,7 +37,7 @@ const AppBar = () => {
     <div className="side-bar">
       <span>
         <img src="/assets/icons/logo-2.jpg" alt="icon" className="icon" />
-        <p> bluecube</p>
+        <p className="icon-text"> bluecube</p>
       </span>
       <ul>
         <NavLinks name="Home" url="/" icon="fa fa-home" />
@@ -46,7 +46,12 @@ const AppBar = () => {
 
         <li className="share-tab">SHARE</li>
         {myOtherNavs.map((navs, index) => {
-          return <NavLinks name={navs.name} url={navs.url} icon={navs.icon} index={index} />;
+          return (
+            <div key={index}>
+              {" "}
+              <NavLinks name={navs.name} url={navs.url} icon={navs.icon} index={index} />
+            </div>
+          );
         })}
       </ul>
     </div>
